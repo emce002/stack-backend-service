@@ -124,16 +124,16 @@ Resources:
           ToPort: 443
           CidrIp: 0.0.0.0/0
 
-Outputs:
-  BackendRepositoryUri:
-    Description: URI of the ECR repository
-    Value: !GetAtt BackendRepository.RepositoryUri
-    Export:
-      Name: !Sub "${ProjectName}-BackendRepositoryUri"
-
-  BackendRepositoryName:
-    Description: Name of the ECR repository
-    Value: !Ref BackendRepository
-    Export:
-      Name: !Sub "${ProjectName}-BackendRepositoryName"
+#Outputs:
+#  BackendRepositoryUri:
+#    Description: URI of the ECR repository
+#    Value: !GetAtt BackendRepository.RepositoryUri
+#    Export:
+#      Name: !Sub "${ProjectName}-BackendRepositoryUri"
+#
+#  BackendRepositoryName:
+#    Description: Name of the ECR repository
+#    Value: !Ref BackendRepository
+#    Export:
+#      Name: !Sub "${ProjectName}-BackendRepositoryName"
 
