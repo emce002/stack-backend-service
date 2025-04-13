@@ -55,25 +55,25 @@ Resources:
       ManagedPolicyArns:
         - 'arn:aws:iam::aws:policy/service-role/AmazonECSTaskExecutionRolePolicy'
 
-#  ECSService:
-#    Type: 'AWS::ECS::Service'
-#    DependsOn: LoadBalancerListener
-#    Properties:
-#      ServiceName: maciek-2-service
-#      Cluster: !Ref ClusterName
-#      DesiredCount: 1
-#      LaunchType: FARGATE
-#      NetworkConfiguration:
-#        AwsvpcConfiguration:
-#          AssignPublicIp: ENABLED
-#          SecurityGroups:
-#            - sg-0c32195644e09dc2f
-#          Subnets: !Ref SubnetIds
-#      TaskDefinition: !Ref BackendTaskDefinition
-#      LoadBalancers:
-#        - ContainerName: container-maciek-1
-#          ContainerPort: 8080
-#          TargetGroupArn: !Ref ALBTargetGroup
+  ECSService:
+    Type: 'AWS::ECS::Service'
+    DependsOn: LoadBalancerListener
+    Properties:
+      ServiceName: maciek-2-service
+      Cluster: !Ref ClusterName
+      DesiredCount: 1
+      LaunchType: FARGATE
+      NetworkConfiguration:
+        AwsvpcConfiguration:
+          AssignPublicIp: ENABLED
+          SecurityGroups:
+            - sg-0c32195644e09dc2f
+          Subnets: !Ref SubnetIds
+      TaskDefinition: !Ref BackendTaskDefinition
+      LoadBalancers:
+        - ContainerName: container-maciek-1
+          ContainerPort: 8080
+          TargetGroupArn: !Ref ALBTargetGroup
 
   # Application Load Balancer Resources
   ApplicationLoadBalancer:
