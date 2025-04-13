@@ -18,7 +18,7 @@ region = "eu-north-1"
 no_fail_on_empty_changeset = true
 parameter_overrides = [
     "ProjectName=szkolenie-projekt",
-    "ClusterNamemaciek-cluster-name-2",
+    "ClusterName=maciek-cluster-name-2",
     "VpcId=vpc-036074a5823a1776f",
     "SubnetIds=subnet-0b17cc250d8d9d730,subnet-08f5b60f4836afd4b",
 ]
