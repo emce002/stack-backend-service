@@ -1,0 +1,24 @@
+
+# definiuje rozne srodowiska, ktore mozna deployowac
+
+# More information about the configuration file can be found here:
+# https://docs.aws.amazon.com/serverless-application-model/latest/developerguide/serverless-sam-cli-config.html
+version = 0.1
+
+[default]
+[default.global.parameters]
+stack_name = "backend-stack-maciek-1"
+
+
+[default.deploy.parameters]
+capabilities = "CAPABILITY_IAM"
+confirm_changeset = false
+s3_bucket = "szkolenie-deplyment-bucket-1"
+region = "eu-north-1"
+no_fail_on_empty_changeset = true
+parameter_overrides = [
+    "ProjectName=szkolenie-projekt",
+    "ClusterNamemaciek-cluster-name-2",
+    "VpcId=vpc-036074a5823a1776f",
+    "SubnetIds=subnet-0b17cc250d8d9d730,subnet-08f5b60f4836afd4b",
+]
