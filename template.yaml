@@ -71,7 +71,7 @@ Resources:
           Subnets: !Ref SubnetIds
       TaskDefinition: !Ref BackendTaskDefinition
       LoadBalancers:
-        - ContainerName: container-maciek-1
+        - ContainerName: container-maciek-2
           ContainerPort: 8080
           TargetGroupArn: !Ref ALBTargetGroup
 
